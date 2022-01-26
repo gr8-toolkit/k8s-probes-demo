@@ -31,12 +31,11 @@ spec:
             port: 80
           failureThreshold: 30
           periodSeconds: 1
-        livenessProbe:
+        readinessProbe:
           httpGet:
             path: /check-dep
             port: 80
           initialDelaySeconds: 3
-          timeoutSeconds: 5
           periodSeconds: 3
           failureThreshold: 1
 ---
